@@ -14,8 +14,38 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="main-header">
+        <div class="main-header__container container">
+          <div class="main-header__logo site-logo">
+            <a class="main-header__logo-link site-logo__logo-link">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img\svg\antarctic-logo-mobile.svg">
+                <img class="main-header__logo-img site-logo__logo-img" src="img/svg/antartic-logo.svg" width="70" height="38" alt="Круизы в Антарктику.">
+              </picture>
+            </a>
+          </div>
+          <nav class="main-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
+            <button class="main-navigation__toggle main-navigation__toggle--header" type="button">
+              <span class="visually-hidden">Переключение состояния меню</span>
+            </button>
+            <div class="main-navigation__wrapper">
+              <ul class="main-navigation__list">
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="">Преимущества</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="">Направления</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="">Ближайшие круизы</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </header>
       <main>
         <section class="intro">

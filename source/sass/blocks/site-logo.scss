@@ -1,0 +1,15 @@
+.site-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-logo__logo-link {
+  width: max-content;
+}
+
+.site-logo__logo-img {
+  @include vp-1023 {
+    width: 38px;
+  }
+}
