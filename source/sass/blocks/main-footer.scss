@@ -1,0 +1,74 @@
+.main-footer {
+  background-color: $tangaroa;
+}
+
+.main-footer__container {
+  display: flex;
+  align-items: center;
+  width: 1180px;
+  max-width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include vp-1023 {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.main-footer__logo {
+  align-self: start;
+  margin-right: 3.5%;
+
+  @include vp-1023 {
+    margin-right: 3.8%;
+  }
+
+  @include vp-767 {
+    margin-right: auto;
+    margin-left: 2px;
+    margin-bottom: 30px;
+  }
+}
+
+.main-footer__navigation {
+  margin-right: auto;
+
+  @include vp-1023 {
+    margin-top: -7px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 21px;
+  }
+}
+
+.main-footer__navigation .main-navigation__link {
+  font-size: 12px;
+  line-height: 15px;
+
+  @include vp-767 {
+    padding: 6px 10px 3px 0;
+  }
+}
+
+.main-footer__social {
+  align-self: start;
+  margin-top: 11px;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    margin-left: -3px;
+  }
+}
