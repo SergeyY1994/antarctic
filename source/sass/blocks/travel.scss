@@ -11,8 +11,9 @@
   color: $tangaroa;
 
   @include vp-1023 {
+    width: 100%;
     padding-top: 87px;
-    padding-bottom: 100px;
+    padding-bottom: 95px;
     padding-right: 50px;
   }
 
