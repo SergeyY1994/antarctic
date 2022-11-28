@@ -1,0 +1,536 @@
+.catalog {
+  font-family: $ff-montserrat;
+  background-color: $color-alice-blue;
+}
+
+.catalog__container {
+  width: 1180px;
+  max-width: 100%;
+  padding: 83px 25px 120px;
+
+  @include vp-1023 {
+    width: 100%;
+    padding: 90px 60px 100px;
+  }
+
+  @include vp-767 {
+    padding: 56px 25px 65px;
+  }
+}
+
+.catalog__title {
+  margin-top: 0;
+  margin-bottom: 49px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  color: $tangaroa;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 2.8%;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 4.4%;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.catalog__card {
+  padding: 337px 30px 22px;
+  background-color: $tangaroa;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:focus,
+  &:hover,
+  &:focus-within {
+    padding: 29px 22px 35px 25px;
+    background-image: none;
+
+    @include vp-1023 {
+      padding: 28px 35px 35px 35px;
+    }
+
+    @include vp-767 {
+      padding: 30px 25px 35px;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 332px 35px 27px;
+  }
+
+  @include vp-767 {
+    padding: 343px 25px 16px;
+  }
+
+  &--1 {
+    background-image: url("../img/cruise-card-1-background@1x.jpg");
+
+    @supports (background-image: url("../img/cruise-card-1-background@1x.webp")) {
+      background-image: url("../img/cruise-card-1-background@1x.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/cruise-card-1-background@2x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-1-background@2x.webp")) {
+        background-image: url("../img/cruise-card-1-background@2x.webp");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/cruise-card-1-background-tablet@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-1-background-tablet@1x.webp")) {
+        background-image: url("../img/cruise-card-1-background-tablet@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-1-background-tablet@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-1-background-tablet@2x.webp")) {
+          background-image: url("../img/cruise-card-1-background-tablet@2x.webp");
+        }
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/cruise-card-1-background-mobile@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-1-background-mobile@1x.webp")) {
+        background-image: url("../img/cruise-card-1-background-mobile@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-1-background-mobile@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-1-background-mobile@2x.webp")) {
+          background-image: url("../img/cruise-card-1-background-mobile@2x.webp");
+        }
+      }
+    }
+  }
+
+  &--2 {
+    background-image: url("../img/cruise-card-1-background@1x.jpg");
+
+    @supports (background-image: url("../img/cruise-card-1-background@1x.webp")) {
+      background-image: url("../img/cruise-card-1-background@1x.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/cruise-card-1-background@2x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-1-background@2x.webp")) {
+        background-image: url("../img/cruise-card-1-background@2x.webp");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/cruise-card-1-background-tablet@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-1-background-tablet@1x.webp")) {
+        background-image: url("../img/cruise-card-1-background-tablet@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-1-background-tablet@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-1-background-tablet@2x.webp")) {
+          background-image: url("../img/cruise-card-1-background-tablet@2x.webp");
+        }
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/cruise-card-1-background-mobile@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-1-background-mobile@1x.webp")) {
+        background-image: url("../img/cruise-card-1-background-mobile@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-1-background-mobile@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-1-background-mobile@2x.webp")) {
+          background-image: url("../img/cruise-card-1-background-mobile@2x.webp");
+        }
+      }
+    }
+  }
+
+  &--3 {
+    background-image: url("../img/cruise-card-3-background@1x.jpg");
+
+    @supports (background-image: url("../img/cruise-card-3-background@1x.webp")) {
+      background-image: url("../img/cruise-card-3-background@1x.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/cruise-card-3-background@2x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-3-background@2x.webp")) {
+        background-image: url("../img/cruise-card-3-background@2x.webp");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/cruise-card-3-background-tablet@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-3-background-tablet@1x.webp")) {
+        background-image: url("../img/cruise-card-3-background-tablet@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-3-background-tablet@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-3-background-tablet@2x.webp")) {
+          background-image: url("../img/cruise-card-3-background-tablet@2x.webp");
+        }
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/cruise-card-3-background-mobile@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-3-background-mobile@1x.webp")) {
+        background-image: url("../img/cruise-card-3-background-mobile@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-3-background-mobile@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-3-background-mobile@2x.webp")) {
+          background-image: url("../img/cruise-card-3-background-mobile@2x.webp");
+        }
+      }
+    }
+  }
+
+  &--4 {
+    background-image: url("../img/cruise-card-4-background@1x.jpg");
+
+    @supports (background-image: url("../img/cruise-card-4-background@1x.webp")) {
+      background-image: url("../img/cruise-card-4-background@1x.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/cruise-card-4-background@2x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-4-background@2x.webp")) {
+        background-image: url("../img/cruise-card-4-background@2x.webp");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/cruise-card-4-background-tablet@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-4-background-tablet@1x.webp")) {
+        background-image: url("../img/cruise-card-4-background-tablet@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-4-background-tablet@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-4-background-tablet@2x.webp")) {
+          background-image: url("../img/cruise-card-4-background-tablet@2x.webp");
+        }
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/cruise-card-4-background-mobile@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-4-background-mobile@1x.webp")) {
+        background-image: url("../img/cruise-card-4-background-mobile@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-4-background-mobile@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-4-background-mobile@2x.webp")) {
+          background-image: url("../img/cruise-card-4-background-mobile@2x.webp");
+        }
+      }
+    }
+  }
+
+  &--5 {
+    background-image: url("../img/cruise-card-5-background@1x.jpg");
+
+    @supports (background-image: url("../img/cruise-card-5-background@1x.webp")) {
+      background-image: url("../img/cruise-card-5-background@1x.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/cruise-card-5-background@2x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-5-background@2x.webp")) {
+        background-image: url("../img/cruise-card-5-background@2x.webp");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/cruise-card-5-background-tablet@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-5-background-tablet@1x.webp")) {
+        background-image: url("../img/cruise-card-5-background-tablet@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-5-background-tablet@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-5-background-tablet@2x.webp")) {
+          background-image: url("../img/cruise-card-5-background-tablet@2x.webp");
+        }
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/cruise-card-5-background-mobile@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-5-background-mobile@1x.webp")) {
+        background-image: url("../img/cruise-card-5-background-mobile@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-5-background-mobile@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-5-background-mobile@2x.webp")) {
+          background-image: url("../img/cruise-card-5-background-mobile@2x.webp");
+        }
+      }
+    }
+  }
+
+  &--6 {
+    background-image: url("../img/cruise-card-6-background@1x.jpg");
+
+    @supports (background-image: url("../img/cruise-card-6-background@1x.webp")) {
+      background-image: url("../img/cruise-card-6-background@1x.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/cruise-card-6-background@2x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-6-background@2x.webp")) {
+        background-image: url("../img/cruise-card-6-background@2x.webp");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/cruise-card-6-background-tablet@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-6-background-tablet@1x.webp")) {
+        background-image: url("../img/cruise-card-6-background-tablet@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-6-background-tablet@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-6-background-tablet@2x.webp")) {
+          background-image: url("../img/cruise-card-6-background-tablet@2x.webp");
+        }
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/cruise-card-6-background-mobile@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-6-background-mobile@1x.webp")) {
+        background-image: url("../img/cruise-card-6-background-mobile@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-6-background-mobile@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-6-background-mobile@2x.webp")) {
+          background-image: url("../img/cruise-card-6-background-mobile@2x.webp");
+        }
+      }
+    }
+  }
+
+  &--7 {
+    background-image: url("../img/cruise-card-7-background@1x.jpg");
+
+    @supports (background-image: url("../img/cruise-card-7-background@1x.webp")) {
+      background-image: url("../img/cruise-card-7-background@1x.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/cruise-card-7-background@2x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-7-background@2x.webp")) {
+        background-image: url("../img/cruise-card-7-background@2x.webp");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/cruise-card-7-background-tablet@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-7-background-tablet@1x.webp")) {
+        background-image: url("../img/cruise-card-7-background-tablet@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-7-background-tablet@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-7-background-tablet@2x.webp")) {
+          background-image: url("../img/cruise-card-7-background-tablet@2x.webp");
+        }
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/cruise-card-7-background-mobile@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-7-background-mobile@1x.webp")) {
+        background-image: url("../img/cruise-card-7-background-mobile@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-7-background-mobile@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-7-background-mobile@2x.webp")) {
+          background-image: url("../img/cruise-card-7-background-mobile@2x.webp");
+        }
+      }
+    }
+  }
+
+  &--8 {
+    background-image: url("../img/cruise-card-8-background@1x.jpg");
+
+    @supports (background-image: url("../img/cruise-card-8-background@1x.webp")) {
+      background-image: url("../img/cruise-card-8-background@1x.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/cruise-card-8-background@2x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-8-background@2x.webp")) {
+        background-image: url("../img/cruise-card-8-background@2x.webp");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/cruise-card-8-background-tablet@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-8-background-tablet@1x.webp")) {
+        background-image: url("../img/cruise-card-8-background-tablet@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-8-background-tablet@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-8-background-tablet@2x.webp")) {
+          background-image: url("../img/cruise-card-8-background-tablet@2x.webp");
+        }
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/cruise-card-8-background-mobile@1x.jpg");
+
+      @supports (background-image: url("../img/cruise-card-8-background-mobile@1x.webp")) {
+        background-image: url("../img/cruise-card-8-background-mobile@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/cruise-card-8-background-mobile@2x.jpg");
+
+        @supports (background-image: url("../img/cruise-card-8-background-mobile@2x.webp")) {
+          background-image: url("../img/cruise-card-8-background-mobile@2x.webp");
+        }
+      }
+    }
+  }
+}
+
+.catalog__card:hover .catalog__cruise-information,
+.catalog__card:focus .catalog__cruise-information,
+.catalog__card:focus-within .catalog__cruise-information,
+.catalog__card:hover .catalog__button-order,
+.catalog__card:focus .catalog__button-order,
+.catalog__card:focus-within .catalog__button-order {
+  display: block;
+}
+
+.catalog__card:hover .catalog__card-title,
+.catalog__card:focus .catalog__card-title,
+.catalog__card:focus-within .catalog__card-title {
+  margin-bottom: 13px;
+}
+
+.catalog__card-title {
+  margin: 0;
+  font-family: $ff-montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+}
+
+.catalog__cruise-information {
+  display: none;
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: $ff-montserrat;
+}
+
+.catalog__criuse-information-title {
+  margin: 0;
+  margin-bottom: 1px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-alice-blue;
+}
+
+.catalog__criuse-information-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: $quartz;
+
+  &:not(:last-child) {
+    margin-bottom: 11px;
+  }
+}
+
+.catalog__button-order {
+  display: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: $tangaroa;
+  background-color: $color-alice-blue;
+  user-select: none;
+}

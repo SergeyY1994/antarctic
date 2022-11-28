@@ -1537,6 +1537,636 @@ button,
   line-height: 20px;
 }
 
+.catalog {
+  font-family: "Montserrat", "Arial", sans-serif;
+  background-color: #f9fbfd;
+}
+
+.catalog__container {
+  width: 1180px;
+  max-width: 100%;
+  padding: 83px 25px 120px;
+}
+@media (max-width: 1023px) {
+  .catalog__container {
+    width: 100%;
+    padding: 90px 60px 100px;
+  }
+}
+@media (max-width: 767px) {
+  .catalog__container {
+    padding: 56px 25px 65px;
+  }
+}
+
+.catalog__title {
+  margin-top: 0;
+  margin-bottom: 49px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  color: #011c40;
+}
+@media (max-width: 1023px) {
+  .catalog__title {
+    font-size: 26px;
+    line-height: 39px;
+  }
+}
+@media (max-width: 767px) {
+  .catalog__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.catalog__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 2.8%;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+@media (max-width: 1023px) {
+  .catalog__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 4.4%;
+  }
+}
+@media (max-width: 767px) {
+  .catalog__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.catalog__card {
+  padding: 337px 30px 22px;
+  background-color: #011c40;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.catalog__card:focus, .catalog__card:hover, .catalog__card:focus-within {
+  padding: 29px 22px 35px 25px;
+  background-image: none;
+}
+@media (max-width: 1023px) {
+  .catalog__card:focus, .catalog__card:hover, .catalog__card:focus-within {
+    padding: 28px 35px 35px 35px;
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card:focus, .catalog__card:hover, .catalog__card:focus-within {
+    padding: 30px 25px 35px;
+  }
+}
+@media (max-width: 1023px) {
+  .catalog__card {
+    padding: 332px 35px 27px;
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card {
+    padding: 343px 25px 16px;
+  }
+}
+.catalog__card--1 {
+  background-image: url("../img/cruise-card-1-background@1x.jpg");
+}
+@supports (background-image: url("../img/cruise-card-1-background@1x.webp")) {
+  .catalog__card--1 {
+    background-image: url("../img/cruise-card-1-background@1x.webp");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .catalog__card--1 {
+    background-image: url("../img/cruise-card-1-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background@2x.webp")) {
+    .catalog__card--1 {
+      background-image: url("../img/cruise-card-1-background@2x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .catalog__card--1 {
+    background-image: url("../img/cruise-card-1-background-tablet@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background-tablet@1x.webp")) {
+    .catalog__card--1 {
+      background-image: url("../img/cruise-card-1-background-tablet@1x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .catalog__card--1 {
+    background-image: url("../img/cruise-card-1-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background-tablet@2x.webp")) {
+    .catalog__card--1 {
+      background-image: url("../img/cruise-card-1-background-tablet@2x.webp");
+    }
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card--1 {
+    background-image: url("../img/cruise-card-1-background-mobile@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background-mobile@1x.webp")) {
+    .catalog__card--1 {
+      background-image: url("../img/cruise-card-1-background-mobile@1x.webp");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .catalog__card--1 {
+    background-image: url("../img/cruise-card-1-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background-mobile@2x.webp")) {
+    .catalog__card--1 {
+      background-image: url("../img/cruise-card-1-background-mobile@2x.webp");
+    }
+  }
+}
+.catalog__card--2 {
+  background-image: url("../img/cruise-card-1-background@1x.jpg");
+}
+@supports (background-image: url("../img/cruise-card-1-background@1x.webp")) {
+  .catalog__card--2 {
+    background-image: url("../img/cruise-card-1-background@1x.webp");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .catalog__card--2 {
+    background-image: url("../img/cruise-card-1-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background@2x.webp")) {
+    .catalog__card--2 {
+      background-image: url("../img/cruise-card-1-background@2x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .catalog__card--2 {
+    background-image: url("../img/cruise-card-1-background-tablet@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background-tablet@1x.webp")) {
+    .catalog__card--2 {
+      background-image: url("../img/cruise-card-1-background-tablet@1x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .catalog__card--2 {
+    background-image: url("../img/cruise-card-1-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background-tablet@2x.webp")) {
+    .catalog__card--2 {
+      background-image: url("../img/cruise-card-1-background-tablet@2x.webp");
+    }
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card--2 {
+    background-image: url("../img/cruise-card-1-background-mobile@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background-mobile@1x.webp")) {
+    .catalog__card--2 {
+      background-image: url("../img/cruise-card-1-background-mobile@1x.webp");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .catalog__card--2 {
+    background-image: url("../img/cruise-card-1-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-1-background-mobile@2x.webp")) {
+    .catalog__card--2 {
+      background-image: url("../img/cruise-card-1-background-mobile@2x.webp");
+    }
+  }
+}
+.catalog__card--3 {
+  background-image: url("../img/cruise-card-3-background@1x.jpg");
+}
+@supports (background-image: url("../img/cruise-card-3-background@1x.webp")) {
+  .catalog__card--3 {
+    background-image: url("../img/cruise-card-3-background@1x.webp");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .catalog__card--3 {
+    background-image: url("../img/cruise-card-3-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-3-background@2x.webp")) {
+    .catalog__card--3 {
+      background-image: url("../img/cruise-card-3-background@2x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .catalog__card--3 {
+    background-image: url("../img/cruise-card-3-background-tablet@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-3-background-tablet@1x.webp")) {
+    .catalog__card--3 {
+      background-image: url("../img/cruise-card-3-background-tablet@1x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .catalog__card--3 {
+    background-image: url("../img/cruise-card-3-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-3-background-tablet@2x.webp")) {
+    .catalog__card--3 {
+      background-image: url("../img/cruise-card-3-background-tablet@2x.webp");
+    }
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card--3 {
+    background-image: url("../img/cruise-card-3-background-mobile@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-3-background-mobile@1x.webp")) {
+    .catalog__card--3 {
+      background-image: url("../img/cruise-card-3-background-mobile@1x.webp");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .catalog__card--3 {
+    background-image: url("../img/cruise-card-3-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-3-background-mobile@2x.webp")) {
+    .catalog__card--3 {
+      background-image: url("../img/cruise-card-3-background-mobile@2x.webp");
+    }
+  }
+}
+.catalog__card--4 {
+  background-image: url("../img/cruise-card-4-background@1x.jpg");
+}
+@supports (background-image: url("../img/cruise-card-4-background@1x.webp")) {
+  .catalog__card--4 {
+    background-image: url("../img/cruise-card-4-background@1x.webp");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .catalog__card--4 {
+    background-image: url("../img/cruise-card-4-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-4-background@2x.webp")) {
+    .catalog__card--4 {
+      background-image: url("../img/cruise-card-4-background@2x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .catalog__card--4 {
+    background-image: url("../img/cruise-card-4-background-tablet@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-4-background-tablet@1x.webp")) {
+    .catalog__card--4 {
+      background-image: url("../img/cruise-card-4-background-tablet@1x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .catalog__card--4 {
+    background-image: url("../img/cruise-card-4-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-4-background-tablet@2x.webp")) {
+    .catalog__card--4 {
+      background-image: url("../img/cruise-card-4-background-tablet@2x.webp");
+    }
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card--4 {
+    background-image: url("../img/cruise-card-4-background-mobile@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-4-background-mobile@1x.webp")) {
+    .catalog__card--4 {
+      background-image: url("../img/cruise-card-4-background-mobile@1x.webp");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .catalog__card--4 {
+    background-image: url("../img/cruise-card-4-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-4-background-mobile@2x.webp")) {
+    .catalog__card--4 {
+      background-image: url("../img/cruise-card-4-background-mobile@2x.webp");
+    }
+  }
+}
+.catalog__card--5 {
+  background-image: url("../img/cruise-card-5-background@1x.jpg");
+}
+@supports (background-image: url("../img/cruise-card-5-background@1x.webp")) {
+  .catalog__card--5 {
+    background-image: url("../img/cruise-card-5-background@1x.webp");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .catalog__card--5 {
+    background-image: url("../img/cruise-card-5-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-5-background@2x.webp")) {
+    .catalog__card--5 {
+      background-image: url("../img/cruise-card-5-background@2x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .catalog__card--5 {
+    background-image: url("../img/cruise-card-5-background-tablet@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-5-background-tablet@1x.webp")) {
+    .catalog__card--5 {
+      background-image: url("../img/cruise-card-5-background-tablet@1x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .catalog__card--5 {
+    background-image: url("../img/cruise-card-5-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-5-background-tablet@2x.webp")) {
+    .catalog__card--5 {
+      background-image: url("../img/cruise-card-5-background-tablet@2x.webp");
+    }
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card--5 {
+    background-image: url("../img/cruise-card-5-background-mobile@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-5-background-mobile@1x.webp")) {
+    .catalog__card--5 {
+      background-image: url("../img/cruise-card-5-background-mobile@1x.webp");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .catalog__card--5 {
+    background-image: url("../img/cruise-card-5-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-5-background-mobile@2x.webp")) {
+    .catalog__card--5 {
+      background-image: url("../img/cruise-card-5-background-mobile@2x.webp");
+    }
+  }
+}
+.catalog__card--6 {
+  background-image: url("../img/cruise-card-6-background@1x.jpg");
+}
+@supports (background-image: url("../img/cruise-card-6-background@1x.webp")) {
+  .catalog__card--6 {
+    background-image: url("../img/cruise-card-6-background@1x.webp");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .catalog__card--6 {
+    background-image: url("../img/cruise-card-6-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-6-background@2x.webp")) {
+    .catalog__card--6 {
+      background-image: url("../img/cruise-card-6-background@2x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .catalog__card--6 {
+    background-image: url("../img/cruise-card-6-background-tablet@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-6-background-tablet@1x.webp")) {
+    .catalog__card--6 {
+      background-image: url("../img/cruise-card-6-background-tablet@1x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .catalog__card--6 {
+    background-image: url("../img/cruise-card-6-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-6-background-tablet@2x.webp")) {
+    .catalog__card--6 {
+      background-image: url("../img/cruise-card-6-background-tablet@2x.webp");
+    }
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card--6 {
+    background-image: url("../img/cruise-card-6-background-mobile@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-6-background-mobile@1x.webp")) {
+    .catalog__card--6 {
+      background-image: url("../img/cruise-card-6-background-mobile@1x.webp");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .catalog__card--6 {
+    background-image: url("../img/cruise-card-6-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-6-background-mobile@2x.webp")) {
+    .catalog__card--6 {
+      background-image: url("../img/cruise-card-6-background-mobile@2x.webp");
+    }
+  }
+}
+.catalog__card--7 {
+  background-image: url("../img/cruise-card-7-background@1x.jpg");
+}
+@supports (background-image: url("../img/cruise-card-7-background@1x.webp")) {
+  .catalog__card--7 {
+    background-image: url("../img/cruise-card-7-background@1x.webp");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .catalog__card--7 {
+    background-image: url("../img/cruise-card-7-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-7-background@2x.webp")) {
+    .catalog__card--7 {
+      background-image: url("../img/cruise-card-7-background@2x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .catalog__card--7 {
+    background-image: url("../img/cruise-card-7-background-tablet@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-7-background-tablet@1x.webp")) {
+    .catalog__card--7 {
+      background-image: url("../img/cruise-card-7-background-tablet@1x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .catalog__card--7 {
+    background-image: url("../img/cruise-card-7-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-7-background-tablet@2x.webp")) {
+    .catalog__card--7 {
+      background-image: url("../img/cruise-card-7-background-tablet@2x.webp");
+    }
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card--7 {
+    background-image: url("../img/cruise-card-7-background-mobile@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-7-background-mobile@1x.webp")) {
+    .catalog__card--7 {
+      background-image: url("../img/cruise-card-7-background-mobile@1x.webp");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .catalog__card--7 {
+    background-image: url("../img/cruise-card-7-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-7-background-mobile@2x.webp")) {
+    .catalog__card--7 {
+      background-image: url("../img/cruise-card-7-background-mobile@2x.webp");
+    }
+  }
+}
+.catalog__card--8 {
+  background-image: url("../img/cruise-card-8-background@1x.jpg");
+}
+@supports (background-image: url("../img/cruise-card-8-background@1x.webp")) {
+  .catalog__card--8 {
+    background-image: url("../img/cruise-card-8-background@1x.webp");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .catalog__card--8 {
+    background-image: url("../img/cruise-card-8-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-8-background@2x.webp")) {
+    .catalog__card--8 {
+      background-image: url("../img/cruise-card-8-background@2x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .catalog__card--8 {
+    background-image: url("../img/cruise-card-8-background-tablet@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-8-background-tablet@1x.webp")) {
+    .catalog__card--8 {
+      background-image: url("../img/cruise-card-8-background-tablet@1x.webp");
+    }
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .catalog__card--8 {
+    background-image: url("../img/cruise-card-8-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-8-background-tablet@2x.webp")) {
+    .catalog__card--8 {
+      background-image: url("../img/cruise-card-8-background-tablet@2x.webp");
+    }
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card--8 {
+    background-image: url("../img/cruise-card-8-background-mobile@1x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-8-background-mobile@1x.webp")) {
+    .catalog__card--8 {
+      background-image: url("../img/cruise-card-8-background-mobile@1x.webp");
+    }
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .catalog__card--8 {
+    background-image: url("../img/cruise-card-8-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/cruise-card-8-background-mobile@2x.webp")) {
+    .catalog__card--8 {
+      background-image: url("../img/cruise-card-8-background-mobile@2x.webp");
+    }
+  }
+}
+
+.catalog__card:hover .catalog__cruise-information,
+.catalog__card:focus .catalog__cruise-information,
+.catalog__card:focus-within .catalog__cruise-information,
+.catalog__card:hover .catalog__button-order,
+.catalog__card:focus .catalog__button-order,
+.catalog__card:focus-within .catalog__button-order {
+  display: block;
+}
+
+.catalog__card:hover .catalog__card-title,
+.catalog__card:focus .catalog__card-title,
+.catalog__card:focus-within .catalog__card-title {
+  margin-bottom: 13px;
+}
+
+.catalog__card-title {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+}
+
+.catalog__cruise-information {
+  display: none;
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.catalog__criuse-information-title {
+  margin: 0;
+  margin-bottom: 1px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f9fbfd;
+}
+
+.catalog__criuse-information-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d8d8d9;
+}
+.catalog__criuse-information-description:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.catalog__button-order {
+  display: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #011c40;
+  background-color: #f9fbfd;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
