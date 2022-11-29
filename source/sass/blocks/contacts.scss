@@ -1,0 +1,123 @@
+.contacts {
+  background-color: $color-alice-blue;
+  font-family: $ff-montserrat;
+  color: $tangaroa;
+}
+
+.contacts__container {
+  display: flex;
+  width: 1180px;
+  max-width: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    flex-direction: column-reverse;
+    padding-top: 57px;
+    padding-bottom: 58px;
+  }
+}
+
+.contacts__map {
+  position: relative;
+  width: 48.3%;
+  min-height: 306px;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: 249px 217px, 0 0;
+  background-size: 18px 22px, cover;
+  background-image: url("../img/svg/pin.svg"), url("../img/map-background@1x.png");
+
+  @supports (background-image: url("../img/map-background@1x.webp")) {
+    background-image: url("../img/svg/pin.svg"), url("../img/map-background@1x.webp");
+  }
+
+  @include retina {
+    background-image: url("../img/svg/pin.svg"), url("../img/map-background@2x.png");
+
+    @supports (background-image: url("../img/map-background@2x.webp")) {
+      background-image: url("../img/svg/pin.svg"), url("../img/map-background@2x.webp");
+    }
+  }
+
+  @include vp-1023 {
+    width: 48%;
+    min-height: 335px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 316px;
+  }
+}
+
+.contacts__map iframe {
+  width: 100%;
+  min-height: 100%;
+  border: none;
+
+  @include vp-767 {
+    min-height: 316px;
+  }
+}
+
+.contacts__wrapper {
+  width: 43%;
+
+  @include vp-1023 {
+    width: 47.8%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 38px;
+  }
+}
+
+.contacts__title {
+  margin-top: 75px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-1023 {
+    margin-top: 66px;
+    margin-bottom: 27px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+  }
+}
+
+.contacts__text {
+  margin: 0;
+  padding-left: 26px;
+  font-size: 16px;
+  line-height: 24px;
+  background-position: left;
+  background-repeat: no-repeat;
+
+  &--address {
+    background-image: url("../img/svg/pin.svg");
+
+    @include vp-1023 {
+      background-position: left 5px;
+    }
+  }
+
+  &--tel {
+    background-image: url("../img/svg/tel.svg");
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
