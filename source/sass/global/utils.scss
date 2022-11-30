@@ -1,6 +1,5 @@
 .wrapper {
   position: relative;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -26,6 +25,7 @@
     left: 0;
     right: 0;
     background-color: rgba(0, 43, 102, 0.5);
+    z-index: 1;
   }
 }
 
