@@ -1,11 +1,10 @@
 const mainBlockElement = document.querySelector('.main-block');
 const mainHeaderElement = document.querySelector('.main-header');
-const navToggle = document.querySelector('.main-navigation__toggle');
 const mobileMenuLinkNodeList = document.querySelectorAll('.main-navigation__link--mobile-menu');
 
-changeMainBlockMargin();
-
-navToggle.addEventListener('click', changeMainBlockMargin);
+window.addEventListener('DOMContentLoaded', () => {
+  changeMainBlockMargin();
+});
 
 if (mobileMenuLinkNodeList) {
   for (let element of mobileMenuLinkNodeList) {
@@ -15,9 +14,8 @@ if (mobileMenuLinkNodeList) {
   }
 }
 
-function changeMainBlockMargin() {
+export function changeMainBlockMargin() {
   if (mainBlockElement && mainHeaderElement) {
     mainBlockElement.style.marginTop = `-${mainHeaderElement.offsetHeight}px`;
   }
 }
-
