@@ -577,6 +577,7 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  vertical-align: middle;
   padding: 10px 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1138,12 +1139,12 @@ button,
   }
 }
 
-.traver__wrapper {
+.travel__wrapper {
   width: 49%;
   margin-right: auto;
 }
 @media (max-width: 767px) {
-  .traver__wrapper {
+  .travel__wrapper {
     width: 100%;
   }
 }
