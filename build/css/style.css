@@ -1315,9 +1315,6 @@ button,
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 3.3%;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
   margin: 0;
   padding-left: 0;
   list-style-type: none;
@@ -1336,6 +1333,9 @@ button,
 }
 
 .benefits__item {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
   padding-top: 80px;
   padding-left: 30px;
   padding-right: 30px;
@@ -1506,14 +1506,37 @@ button,
 }
 
 .catalog__card {
-  padding: 337px 30px 22px;
+  padding: 22px 30px;
+  height: 386px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow-y: auto;
+  scrollbar-color: #f9fbfd #011c40;
+  scrollbar-width: thin;
   background-color: #011c40;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .catalog__card:focus, .catalog__card:hover, .catalog__card:focus-within {
   padding: 29px 22px 35px 25px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background-image: none;
+}
+.catalog__card:focus::-webkit-scrollbar, .catalog__card:hover::-webkit-scrollbar, .catalog__card:focus-within::-webkit-scrollbar {
+  width: 8px;
+}
+.catalog__card:focus::-webkit-scrollbar-thumb, .catalog__card:hover::-webkit-scrollbar-thumb, .catalog__card:focus-within::-webkit-scrollbar-thumb {
+  background-color: #f9fbfd;
 }
 @media (max-width: 1023px) {
   .catalog__card:focus, .catalog__card:hover, .catalog__card:focus-within {
@@ -1522,17 +1545,17 @@ button,
 }
 @media (max-width: 767px) {
   .catalog__card:focus, .catalog__card:hover, .catalog__card:focus-within {
-    padding: 30px 25px 35px;
+    padding: 30px 17px 35px 25px;
   }
 }
 @media (max-width: 1023px) {
   .catalog__card {
-    padding: 332px 35px 27px;
+    padding: 27px 35px;
   }
 }
 @media (max-width: 767px) {
   .catalog__card {
-    padding: 343px 25px 16px;
+    padding: 16px 25px;
   }
 }
 .catalog__card--1 {

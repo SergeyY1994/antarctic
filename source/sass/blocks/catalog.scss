@@ -59,7 +59,14 @@
 }
 
 .catalog__card {
-  padding: 337px 30px 22px;
+  padding: 22px 30px;
+  height: 386px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: auto;
+  scrollbar-color: $color-alice-blue $tangaroa;
+  scrollbar-width: thin;
   background-color: $tangaroa;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,23 +75,32 @@
   &:hover,
   &:focus-within {
     padding: 29px 22px 35px 25px;
+    justify-content: flex-start;
     background-image: none;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-alice-blue;
+    }
 
     @include vp-1023 {
       padding: 28px 35px 35px 35px;
     }
 
     @include vp-767 {
-      padding: 30px 25px 35px;
+      padding: 30px 17px 35px 25px;
     }
   }
 
   @include vp-1023 {
-    padding: 332px 35px 27px;
+    padding: 27px 35px;
   }
 
   @include vp-767 {
-    padding: 343px 25px 16px;
+    padding: 16px 25px;
   }
 
   &--1 {
