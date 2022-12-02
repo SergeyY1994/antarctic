@@ -14,6 +14,7 @@ if (navMain && navToggle && mainHeaderContainer && mainHeaderNavigationList && m
   navMain.classList.remove('main-navigation--nojs');
 
   if (window.matchMedia('(max-width:767px)').matches) {
+    // переписать здесь на mainHeaderSourceElement
     document.querySelector('source').setAttribute('srcset', '../img/svg/antartic-logo.svg');
   }
 

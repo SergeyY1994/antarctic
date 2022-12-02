@@ -94,6 +94,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 3.3%;
+  align-items: start;
   margin: 0;
   padding-left: 0;
   list-style-type: none;

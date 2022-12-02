@@ -1149,7 +1149,7 @@ button,
   }
 }
 
-.travel__title {
+.travel__wrapper h2 {
   margin-top: 56px;
   margin-bottom: 24px;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -1158,7 +1158,7 @@ button,
   line-height: 42px;
 }
 @media (max-width: 1023px) {
-  .travel__title {
+  .travel__wrapper h2 {
     width: 90%;
     margin-top: 3px;
     margin-bottom: 15px;
@@ -1167,20 +1167,20 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .travel__title {
+  .travel__wrapper h2 {
     font-size: 24px;
     line-height: 34px;
   }
 }
 
-.travel__text {
+.travel__wrapper p {
   margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
 @media (max-width: 767px) {
-  .travel__text {
+  .travel__wrapper p {
     margin-bottom: 34px;
   }
 }
@@ -1315,6 +1315,9 @@ button,
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 3.3%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   margin: 0;
   padding-left: 0;
   list-style-type: none;
@@ -2169,7 +2172,7 @@ button,
   }
 }
 
-.booking__title {
+.booking__wrapper h2 {
   margin: 0;
   margin-bottom: 8px;
   font-weight: 700;
@@ -2177,35 +2180,35 @@ button,
   line-height: 60px;
 }
 @media (max-width: 1023px) {
-  .booking__title {
+  .booking__wrapper h2 {
     margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
   }
 }
 @media (max-width: 767px) {
-  .booking__title {
+  .booking__wrapper h2 {
     margin-bottom: 14px;
     font-size: 24px;
     line-height: 31px;
   }
 }
 
-.booking__text {
+.booking__wrapper p {
   margin: 0;
   width: 62%;
   font-size: 18px;
   line-height: 27px;
 }
 @media (max-width: 1023px) {
-  .booking__text {
+  .booking__wrapper p {
     width: 57%;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media (max-width: 767px) {
-  .booking__text {
+  .booking__wrapper p {
     width: 97%;
     font-size: 16px;
     line-height: 22px;
