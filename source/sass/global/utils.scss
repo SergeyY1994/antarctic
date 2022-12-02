@@ -29,6 +29,10 @@
   }
 }
 
+.wrapper.menu-open .main-header__logo {
+  left: 51px;
+}
+
 .rouble {
   font-family: $ff-rouble;
   /* stylelint-disable */
