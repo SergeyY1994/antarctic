@@ -11,7 +11,7 @@ if (navMain && navToggle && mainHeaderSourceElement && mobileMenuLinkNodeList &&
   navMain.classList.remove('main-navigation--nojs');
 
   if (window.matchMedia('(max-width:767px)').matches) {
-    mainHeaderSourceElement.setAttribute('srcset', '../img/svg/antartic-logo.svg');
+    mainHeaderSourceElement.setAttribute('srcset', 'img/svg/antartic-logo.svg');
   }
 
   navToggle.addEventListener('click', function () {
@@ -42,7 +42,7 @@ function openMobileMenu() {
   }
 
   bodyElement.style.overflowY = 'hidden';
-  mainHeaderSourceElement.setAttribute('srcset', '../img/svg/antarctic-logo-mobile.svg');
+  mainHeaderSourceElement.setAttribute('srcset', 'img/svg/antarctic-logo-mobile.svg');
   navMain.classList.remove('main-navigation--closed');
   navMain.classList.add('main-navigation--opened');
   changeMainBlockMargin();
