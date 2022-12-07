@@ -54,7 +54,7 @@ function closeMobileMenu() {
   }
 
   bodyElement.style.overflowY = 'auto';
-  mainHeaderSourceElement.setAttribute('srcset', '../img/svg/antartic-logo.svg');
+  mainHeaderSourceElement.setAttribute('srcset', 'img/svg/antartic-logo.svg');
   navMain.classList.add('main-navigation--closed');
   navMain.classList.remove('main-navigation--opened');
   changeMainBlockMargin();
