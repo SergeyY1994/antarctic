@@ -98,26 +98,52 @@
 }
 
 .contacts__text {
+  position: relative;
   margin: 0;
   padding-left: 26px;
   font-size: 16px;
   line-height: 24px;
-  background-position: left;
-  background-repeat: no-repeat;
+  transition: opacity $trans-default;
 
   &--address {
-    background-image: url("../img/svg/pin.svg");
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      height: 22px;
+      width: 18px;
+      background-image: url("../img/svg/pin.svg");
+      background-repeat: no-repeat;
 
-    @include vp-1023 {
-      background-position: left 5px;
+      @include vp-1023 {
+        top: 5px;
+        left: 0;
+      }
     }
   }
 
   &--tel {
-    background-image: url("../img/svg/tel.svg");
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: -1px;
+      height: 18px;
+      width: 18px;
+      background-image: url("../img/svg/tel.svg");
+      background-repeat: no-repeat;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
   }
 
   &:not(:last-child) {
     margin-bottom: 20px;
   }
+}
+
+.contacts__text-nowrap {
+  white-space: nowrap;
 }

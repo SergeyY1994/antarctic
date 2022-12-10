@@ -994,8 +994,8 @@ button,
   background-image: url("../img/main-background@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 @supports (background-image: url("../img/main-background@1x.webp")) {
   .main-block {
@@ -1016,6 +1016,8 @@ button,
   .main-block {
     margin-top: -52px;
     background-image: url("../img/main-background-tablet@1x.jpg");
+    -webkit-filter: none;
+            filter: none;
   }
   @supports (background-image: url("../img/main-background-tablet@1x.webp")) {
     .main-block {
@@ -1060,7 +1062,7 @@ button,
   max-width: 100%;
   padding-top: 271px;
   padding-left: 104px;
-  padding-bottom: 283px;
+  padding-bottom: 280px;
 }
 @media (max-width: 1023px) {
   .main-block__container {
@@ -1133,7 +1135,7 @@ button,
   display: flex;
   width: 1180px;
   max-width: 100%;
-  padding-top: 116px;
+  padding-top: 119px;
   padding-bottom: 145px;
   color: #011c40;
 }
@@ -1352,9 +1354,6 @@ button,
 
 .benefits__item {
   min-height: 241px;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
   padding-top: 80px;
   padding-left: 30px;
   padding-right: 30px;
@@ -1545,6 +1544,10 @@ button,
   background-color: #011c40;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .catalog__card:focus, .catalog__card:hover, .catalog__card:focus-within {
   padding: 29px 22px 35px 25px;
@@ -2259,6 +2262,10 @@ button,
   }
 }
 
+.booking__text-nowrap {
+  white-space: nowrap;
+}
+
 .booking__form {
   max-width: 403px;
   padding: 50px;
@@ -2316,6 +2323,10 @@ button,
   font-size: 14px;
   line-height: 21px;
   border: none;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .booking__form-field input::-webkit-input-placeholder {
   font-size: 14px;
@@ -2337,6 +2348,14 @@ button,
   font-size: 14px;
   line-height: 21px;
 }
+@media (hover: hover) {
+  .booking__form-field input:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+}
+.booking__form-field input.focus-visible:focus {
+  opacity: 0.8;
+}
 
 .booking__form-field--checkbox input {
   width: auto;
@@ -2350,6 +2369,15 @@ button,
   height: min-content;
   font-size: 10px;
   line-height: 13px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+@media (hover: hover) {
+  .booking__form-field--checkbox label:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
 }
 @media (max-width: 767px) {
   .booking__form-field--checkbox label {
@@ -2367,6 +2395,10 @@ button,
   background-color: #f9fbfd;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 @media (max-width: 767px) {
   .booking__form-field--checkbox span {
@@ -2380,6 +2412,7 @@ button,
 
 .booking__form-field--checkbox input:focus ~ label[for=user-agreement] {
   outline: 2px solid #f9fbfd;
+  opacity: 0.8;
 }
 
 .booking__form-field button {
@@ -2394,6 +2427,7 @@ button,
           align-items: center;
   width: 100%;
   padding: 12px;
+  font-weight: 600;
   font-size: 14px;
   line-height: 20px;
   color: #011c40;
@@ -2522,26 +2556,54 @@ button,
 }
 
 .contacts__text {
+  position: relative;
   margin: 0;
   padding-left: 26px;
   font-size: 16px;
   line-height: 24px;
-  background-position: left;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.contacts__text--address::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  height: 22px;
+  width: 18px;
+  background-image: url("../img/svg/pin.svg");
   background-repeat: no-repeat;
 }
-.contacts__text--address {
-  background-image: url("../img/svg/pin.svg");
-}
 @media (max-width: 1023px) {
-  .contacts__text--address {
-    background-position: left 5px;
+  .contacts__text--address::before {
+    top: 5px;
+    left: 0;
   }
 }
-.contacts__text--tel {
+.contacts__text--tel::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -1px;
+  height: 18px;
+  width: 18px;
   background-image: url("../img/svg/tel.svg");
+  background-repeat: no-repeat;
+}
+@media (hover: hover) {
+  .contacts__text--tel:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+}
+.contacts__text--tel.focus-visible:focus {
+  opacity: 0.8;
 }
 .contacts__text:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.contacts__text-nowrap {
+  white-space: nowrap;
 }
 
 /* @mixin hover-focus {

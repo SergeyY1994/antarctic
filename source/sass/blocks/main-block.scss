@@ -5,7 +5,7 @@
   background-image: url("../img/main-background@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
   @supports (background-image: url("../img/main-background@1x.webp")) {
     background-image: url("../img/main-background@1x.webp");
@@ -22,6 +22,7 @@
   @include vp-1023 {
     margin-top: -52px;
     background-image: url("../img/main-background-tablet@1x.jpg");
+    filter: none;
 
     @supports (background-image: url("../img/main-background-tablet@1x.webp")) {
       background-image: url("../img/main-background-tablet@1x.webp");
@@ -59,7 +60,7 @@
   max-width: 100%;
   padding-top: 271px;
   padding-left: 104px;
-  padding-bottom: 283px;
+  padding-bottom: 280px;
 
   @include vp-1023 {
     width: 100%;
