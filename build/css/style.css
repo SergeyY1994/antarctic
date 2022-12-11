@@ -1039,6 +1039,7 @@ button,
   .main-block {
     margin-top: 0;
     background-image: url("../img/main-background-mobile@1x.jpg");
+    background-position: center;
   }
   @supports (background-image: url("../img/main-background-mobile@1x.webp")) {
     .main-block {
