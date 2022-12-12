@@ -612,7 +612,17 @@ button,
 }
 
 .main-header {
-  background-color: #011c40;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#011c40), to(#011c40));
+  background-image: -o-linear-gradient(#011c40, #011c40);
+  background-image: linear-gradient(#011c40, #011c40);
+}
+@media (max-width: 767px) {
+  .main-header {
+    position: static;
+  }
 }
 
 .main-header__container {
@@ -635,8 +645,17 @@ button,
 }
 @media (max-width: 767px) {
   .main-header__container {
-    display: block;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .main-header__container--nojs {
+    position: static;
+    display: block;
   }
 }
 
@@ -988,12 +1007,12 @@ button,
 }
 
 .main-block {
-  margin-top: -73px;
   color: #f9fbfd;
   background-color: #011c40;
   background-image: url("../img/main-background@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -1014,10 +1033,9 @@ button,
 }
 @media (max-width: 1023px) {
   .main-block {
-    margin-top: -52px;
     background-image: url("../img/main-background-tablet@1x.jpg");
-    -webkit-filter: none;
-            filter: none;
+    -webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
   }
   @supports (background-image: url("../img/main-background-tablet@1x.webp")) {
     .main-block {
@@ -1226,7 +1244,7 @@ button,
 .benefits {
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
-  background-color: #f9fbfd;
+  background-color: #e3ecf6;
   background-image: url("../img/benefits-background@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2116,7 +2134,7 @@ button,
 .booking {
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
-  background-color: #f9fbfd;
+  background-color: #e3ecf6;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../img/booking-background@1x.jpg");
@@ -2312,6 +2330,10 @@ button,
   position: relative;
   padding-left: 20px;
 }
+.booking__form-field--checkbox:focus-within {
+  outline: 2px solid #f9fbfd;
+  opacity: 0.8;
+}
 @media (max-width: 767px) {
   .booking__form-field--checkbox {
     padding-left: 28px;
@@ -2363,11 +2385,9 @@ button,
 }
 
 .booking__form-field--checkbox label {
-  display: inline-block;
-  vertical-align: super;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 9px;
   font-size: 10px;
   line-height: 13px;
   cursor: pointer;
@@ -2384,36 +2404,29 @@ button,
   .booking__form-field--checkbox label {
     width: 78%;
     margin-top: -3px;
+    padding-top: 0;
   }
+}
+
+.booking__form-field--checkbox input:checked + label span {
+  background-image: url("../img/svg/checkbox-checked.svg");
 }
 
 .booking__form-field--checkbox span {
   position: absolute;
   left: 0;
-  top: -3px;
+  top: -1px;
   width: 18px;
   height: 18px;
   background-color: #f9fbfd;
   background-position: center;
   background-repeat: no-repeat;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 @media (max-width: 767px) {
   .booking__form-field--checkbox span {
-    top: -1px;
+    top: 3px;
+    left: 1px;
   }
-}
-
-.booking__form-field--checkbox input:checked + span {
-  background-image: url("../img/svg/checkbox-checked.svg");
-}
-
-.booking__form-field--checkbox input:focus ~ label[for=user-agreement] {
-  outline: 2px solid #f9fbfd;
-  opacity: 0.8;
 }
 
 .booking__form-field button {

@@ -1,7 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import './modules/mobile-menu';
-import './modules/stretching-background-on-main-block';
 
 // ---------------------------------
 

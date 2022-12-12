@@ -1,10 +1,10 @@
 .main-block {
-  margin-top: -73px;
   color: $color-alice-blue;
   background-color: $tangaroa;
   background-image: url("../img/main-background@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
   @supports (background-image: url("../img/main-background@1x.webp")) {
@@ -20,9 +20,8 @@
   }
 
   @include vp-1023 {
-    margin-top: -52px;
     background-image: url("../img/main-background-tablet@1x.jpg");
-    filter: none;
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
 
     @supports (background-image: url("../img/main-background-tablet@1x.webp")) {
       background-image: url("../img/main-background-tablet@1x.webp");
