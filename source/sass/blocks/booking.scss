@@ -1,4 +1,5 @@
 .booking {
+  min-height: 40vw;
   font-family: $ff-montserrat;
   color: $tangaroa;
   background-color: $solitude;
@@ -36,6 +37,7 @@
   }
 
   @include vp-767 {
+    min-height: auto;
     margin-top: 0;
     background-image: url("../img/booking-background-mobile@1x.jpg");
 
@@ -81,7 +83,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
   }
 }
 

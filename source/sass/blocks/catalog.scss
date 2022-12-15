@@ -60,7 +60,8 @@
 
 .catalog__card {
   padding: 22px 30px;
-  height: 386px;
+  height: 32vw;
+  max-height: 386px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -70,13 +71,12 @@
   background-color: $tangaroa;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   transition: $trans-default;
 
   &:focus,
   &:hover,
   &:focus-within {
-    padding: 29px 22px 35px 25px;
+    padding: 29px 17px 35px 25px;
     justify-content: flex-start;
     background-image: none;
 
@@ -98,10 +98,13 @@
   }
 
   @include vp-1023 {
+    height: 50.25vw;
+    max-height: none;
     padding: 27px 35px;
   }
 
   @include vp-767 {
+    height: 120.65vw;
     padding: 16px 25px;
   }
 

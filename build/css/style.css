@@ -1007,6 +1007,7 @@ button,
 }
 
 .main-block {
+  min-height: 47vw;
   color: #f9fbfd;
   background-color: #011c40;
   background-image: url("../img/main-background@1x.jpg");
@@ -1033,6 +1034,7 @@ button,
 }
 @media (max-width: 1023px) {
   .main-block {
+    min-height: 83vw;
     background-image: url("../img/main-background-tablet@1x.jpg");
     -webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
             filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
@@ -1055,9 +1057,9 @@ button,
 }
 @media (max-width: 767px) {
   .main-block {
+    min-height: 156vw;
     margin-top: 0;
     background-image: url("../img/main-background-mobile@1x.jpg");
-    background-position: center;
   }
   @supports (background-image: url("../img/main-background-mobile@1x.webp")) {
     .main-block {
@@ -1546,7 +1548,8 @@ button,
 
 .catalog__card {
   padding: 22px 30px;
-  height: 386px;
+  height: 32vw;
+  max-height: 386px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1563,13 +1566,12 @@ button,
   background-color: #011c40;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 .catalog__card:focus, .catalog__card:hover, .catalog__card:focus-within {
-  padding: 29px 22px 35px 25px;
+  padding: 29px 17px 35px 25px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1593,11 +1595,14 @@ button,
 }
 @media (max-width: 1023px) {
   .catalog__card {
+    height: 50.25vw;
+    max-height: none;
     padding: 27px 35px;
   }
 }
 @media (max-width: 767px) {
   .catalog__card {
+    height: 120.65vw;
     padding: 16px 25px;
   }
 }
@@ -2132,6 +2137,7 @@ button,
 }
 
 .booking {
+  min-height: 40vw;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
   background-color: #e3ecf6;
@@ -2177,6 +2183,7 @@ button,
 }
 @media (max-width: 767px) {
   .booking {
+    min-height: auto;
     margin-top: 0;
     background-image: url("../img/booking-background-mobile@1x.jpg");
   }
@@ -2234,7 +2241,7 @@ button,
 }
 @media (max-width: 767px) {
   .booking__wrapper {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
   }
 }
 
